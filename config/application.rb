@@ -59,5 +59,14 @@ module ForkMyReligionServer
     # parameters by using an attr_accessible or attr_protected declaration.
     config.active_record.whitelist_attributes = true
 
+
+    config.middleware.use Rack::Cors do
+      allow do
+        origins '*'
+        resource '*', :headers => :any, :methods => [:get, :post, :options, :update, :delete, :put]
+      end
+    end
+
+
   end
 end

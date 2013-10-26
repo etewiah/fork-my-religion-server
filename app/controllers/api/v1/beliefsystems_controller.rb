@@ -12,16 +12,18 @@ class Api::V1::BeliefsystemsController < ApplicationController
   def show
     @api_v1_beliefsystem = Api::V1::Beliefsystem.find(params[:id])
 
-    render json: @api_v1_beliefsystem
+    render json: @api_v1_beliefsystem, root: 'beliefsystem'
+    # , serializer: Api::V1::SingleBoardSerializer 
+
   end
 
   # POST /api/v1/beliefsystems
   # POST /api/v1/beliefsystems.json
   def create
-    @api_v1_beliefsystem = Api::V1::Beliefsystem.new(params[:api_v1_beliefsystem])
+    @api_v1_beliefsystem = Api::V1::Beliefsystem.new(params[:Beliefsystem])
 
     if @api_v1_beliefsystem.save
-      render json: @api_v1_beliefsystem, status: :created, location: @api_v1_beliefsystem
+      render json: @api_v1_beliefsystem, status: :created, root: 'beliefsystem', location: @api_v1_beliefsystem
     else
       render json: @api_v1_beliefsystem.errors, status: :unprocessable_entity
     end
