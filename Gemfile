@@ -7,11 +7,14 @@ gem 'rails', '3.2.13'
 
 gem 'pg'
 
-
-
 gem 'jquery-rails'
 
 gem 'rails-api'
+gem 'active_model_serializers'
+
+gem 'thin'
+# gem 'rack-cors', require: false
+gem 'rack-cors', :require => 'rack/cors'
 
 # To use ActiveModel has_secure_password
 # gem 'bcrypt-ruby', '~> 3.0.0'
