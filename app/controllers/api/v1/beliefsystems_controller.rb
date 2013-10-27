@@ -4,7 +4,7 @@ class Api::V1::BeliefsystemsController < ApplicationController
   def index
     @api_v1_beliefsystems = Api::V1::Beliefsystem.all
 
-    render json: @api_v1_beliefsystems
+    render json: @api_v1_beliefsystems, root: 'beliefsystems', each_serializer: Api::V1::BeliefsystemSerializer 
   end
 
   # GET /api/v1/beliefsystems/1
@@ -20,7 +20,7 @@ class Api::V1::BeliefsystemsController < ApplicationController
   # POST /api/v1/beliefsystems
   # POST /api/v1/beliefsystems.json
   def create
-    @api_v1_beliefsystem = Api::V1::Beliefsystem.new(params[:Beliefsystem])
+    @api_v1_beliefsystem = Api::V1::Beliefsystem.new(params[:beliefsystem])
 
     if @api_v1_beliefsystem.save
       render json: @api_v1_beliefsystem, status: :created, root: 'beliefsystem', location: @api_v1_beliefsystem
