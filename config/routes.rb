@@ -2,7 +2,14 @@ ForkMyReligionServer::Application.routes.draw do
   namespace :api do  namespace :v1 do resources :beliefsystems, except: [:new, :edit] end end
 
 
-  root :to => "ember#home"
+  %w[home about].each do |page|
+    get page, controller: 'pages', action: page
+  end
+
+  get "app/*ember_route", controller: 'ember', action: 'app'
+  get 'app', controller: 'ember', action: 'home'
+
+  root :to => "pages#home"
 
   # The priority is based upon order of creation:
   # first created -> highest priority.

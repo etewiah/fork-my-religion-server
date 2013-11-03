@@ -28,5 +28,9 @@ gem 'rack-cors', :require => 'rack/cors'
 # Deploy with Capistrano
 gem 'capistrano'
 
+
+gem 'sass-rails', '>= 3.2' # sass-rails needs to be higher than 3.2
+gem 'bootstrap-sass', '~> 3.0.1.0.rc'
+
 # To use debugger
 # gem 'debugger'
