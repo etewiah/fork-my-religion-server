@@ -11,7 +11,7 @@
 #
 # It's strongly recommended to check this file into your version control system.
 
-ActiveRecord::Schema.define(:version => 20131026221656) do
+ActiveRecord::Schema.define(:version => 20131027032801) do
 
   create_table "api_v1_beliefsystems", :force => true do |t|
     t.string   "name"
@@ -20,8 +20,9 @@ ActiveRecord::Schema.define(:version => 20131026221656) do
     t.text     "tenants"
     t.text     "tags"
     t.text     "repository"
-    t.datetime "created_at",  :null => false
-    t.datetime "updated_at",  :null => false
+    t.datetime "created_at",      :null => false
+    t.datetime "updated_at",      :null => false
+    t.integer  "followers_count"
   end
 
 end

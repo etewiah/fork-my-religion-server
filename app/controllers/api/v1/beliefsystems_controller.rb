@@ -34,7 +34,7 @@ class Api::V1::BeliefsystemsController < ApplicationController
   def update
     @api_v1_beliefsystem = Api::V1::Beliefsystem.find(params[:id])
 
-    if @api_v1_beliefsystem.update_attributes(params[:api_v1_beliefsystem])
+    if @api_v1_beliefsystem.update_attributes(params[:beliefsystem])
       head :no_content
     else
       render json: @api_v1_beliefsystem.errors, status: :unprocessable_entity
