@@ -1,0 +1,15 @@
+chdir: <%= current_path %>
+environment: production
+address: 0.0.0.0
+port: 3000
+timeout: 30
+log: <%= shared_path %>/log/thin.log
+pid: <%= shared_path %>/pids/thin.pid
+socket: <%= shared_path %>/sockets/thin.sock
+max_conns: 1024
+max_persistent_conns: 100
+require: []
+wait: 30
+servers: 2
+daemonize: true
+onebyone: true

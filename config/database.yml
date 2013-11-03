@@ -43,13 +43,13 @@ test:
   encoding: unicode
   database: fork-my-religion-server_test
   pool: 5
-  username: fork-my-religion-server
-  password:
+  # username: fork-my-religion-server
+  # password:
 
 production:
   adapter: postgresql
   encoding: unicode
-  database: fork-my-religion-server_production
+  database: forkmyreligion_production
   pool: 5
-  username: fork-my-religion-server
-  password:
+  # username: fork-my-religion-server
+  # password:

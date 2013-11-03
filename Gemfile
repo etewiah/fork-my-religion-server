@@ -26,7 +26,7 @@ gem 'rack-cors', :require => 'rack/cors'
 # gem 'unicorn'
 
 # Deploy with Capistrano
-# gem 'capistrano'
+gem 'capistrano'
 
 # To use debugger
 # gem 'debugger'
