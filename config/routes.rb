@@ -1,6 +1,9 @@
 ForkMyReligionServer::Application.routes.draw do
   namespace :api do  namespace :v1 do resources :beliefsystems, except: [:new, :edit] end end
 
+
+  root :to => "ember#home"
+
   # The priority is based upon order of creation:
   # first created -> highest priority.
 
